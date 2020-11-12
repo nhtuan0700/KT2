@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-//
-                            customAdapter.removeItem(listContact);
+                            listContact.remove(position);
+                            customAdapter.notifyDataSetChanged();
 
                     }
                 });
